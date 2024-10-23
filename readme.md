@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Nome do Jogo: *Insira o nome do jogo aqui*
 
 ---
@@ -25,3 +26,4 @@
   - [LinkedIn](#)
 
 ---
+=======
