@@ -22,8 +22,8 @@
   - [LinkedIn](https://www.linkedin.com/in/arthur-tavares-a57b8528a/)
 
 - **Artur Bezerra da Silva**  
-  - [GitHub](#)  
-  - [LinkedIn](#)
+  - [GitHub]([https://github.com/TutubasDev)  
+  - [LinkedIn](https://www.linkedin.com/in/artur-bezerra-1945022ba/)
 
 ---
 =======
