@@ -12,6 +12,17 @@ Pontuação: Um ponto é marcado quando a bola atravessa a região da raquete e 
 
 Velocidade: A velocidade da bola aumentando gradualmente tornando o jogo mais difícil.
 
+Controles do Jogo
+Jogador 1 (esquerda):
+
+W: mover para cima
+S: mover para baixo
+Jogador 2 (direita):
+
+I: mover para cima
+K: mover para baixo
+Q: sair do jogo
+
 ## Disciplina
 **Programação Imperativa e Funcional** - 2024.2
 
