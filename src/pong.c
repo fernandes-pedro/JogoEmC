@@ -9,12 +9,12 @@
 
 typedef struct {
     int x, y;
-    int dy; // direção do paddle
+    int dy; 
 } Paddle;
 
 typedef struct {
     int x, y;
-    int dx, dy; // direção da bola
+    int dx, dy; 
 } Ball;
 
 void initialize();
@@ -33,18 +33,17 @@ int main() {
         clear();
         draw(&player1, &player2, &ball);
 
-        // Move the ball
         move_ball(&ball, &player1, &player2);
 
-        // Get user input
+   
         int ch = getch();
         if (ch == 'w') move_paddle(&player1, -1);
         if (ch == 's') move_paddle(&player1, 1);
         if (ch == 'i') move_paddle(&player2, -1);
         if (ch == 'k') move_paddle(&player2, 1);
-        if (ch == 'q') break; // sair do jogo
+        if (ch == 'q') break; 
 
-        usleep(100000); // controla a velocidade do jogo
+        usleep(100000); 
     }
 
     endwin();
@@ -56,21 +55,21 @@ void initialize() {
     noecho();
     cbreak();
     keypad(stdscr, TRUE);
-    nodelay(stdscr, TRUE); // não bloquear na entrada
+    nodelay(stdscr, TRUE); 
     srand(time(NULL));
 }
 
 void draw(Paddle *p1, Paddle *p2, Ball *ball) {
-    // Desenha paddles
+   
     for (int i = 0; i < PADDLE_HEIGHT; i++) {
         mvprintw(p1->y + i, p1->x, "#");
         mvprintw(p2->y + i, p2->x, "#");
     }
     
-    // Desenha a bola
+    
     mvprintw(ball->y, ball->x, "O");
     
-    // Atualiza a tela
+    
     refresh();
 }
 
@@ -78,18 +77,18 @@ void move_ball(Ball *ball, Paddle *p1, Paddle *p2) {
     ball->x += ball->dx;
     ball->y += ball->dy;
 
-    // Colisão com as bordas
+    
     if (ball->y <= 0 || ball->y >= HEIGHT - 1) {
-        ball->dy *= -1; // inverte a direção vertical
+        ball->dy *= -1;
     }
 
-    // Colisão com paddles
+
     if ((ball->x == p1->x + 1 && ball->y >= p1->y && ball->y < p1->y + PADDLE_HEIGHT) ||
         (ball->x == p2->x - 1 && ball->y >= p2->y && ball->y < p2->y + PADDLE_HEIGHT)) {
-        ball->dx *= -1; // inverte a direção horizontal
+        ball->dx *= -1; 
     }
 
-    // Reinicia a bola se sair pela lateral
+
     if (ball->x <= 0 || ball->x >= WIDTH - 1) {
         ball->x = WIDTH / 2;
         ball->y = HEIGHT / 2;
@@ -100,7 +99,7 @@ void move_ball(Ball *ball, Paddle *p1, Paddle *p2) {
 
 void move_paddle(Paddle *paddle, int direction) {
     paddle->y += direction;
-    // Restringe movimento dos paddles
+
     if (paddle->y < 0) paddle->y = 0;
     if (paddle->y > HEIGHT - PADDLE_HEIGHT) paddle->y = HEIGHT - PADDLE_HEIGHT;
 }
