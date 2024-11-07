@@ -35,7 +35,7 @@ Este jogo foi desenvolvido utilizando a biblioteca **ncurses**, que permite a cr
 
 Abra o terminal e execute o seguinte comando para instalar o **ncurses**:
 
-```bash
+bash
 sudo apt update
 sudo apt install libncurses5-dev libncursesw5-dev
 
