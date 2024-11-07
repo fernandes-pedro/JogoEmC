@@ -23,6 +23,26 @@ I: mover para cima
 K: mover para baixo
 Q: sair do jogo
 
+## **Instruções de Uso**
+
+Para rodar o jogo **Pong** em seu sistema, siga os passos abaixo:
+
+### **1. Instalação de Dependências**
+
+Este jogo foi desenvolvido utilizando a biblioteca **ncurses**, que permite a criação de interfaces de texto no terminal.
+
+### *No Linux (Ubuntu/Debian):*
+
+Abra o terminal e execute o seguinte comando para instalar o **ncurses**:
+
+```bash
+sudo apt update
+sudo apt install libncurses5-dev libncursesw5-dev
+
+### *No macOS (com Homebrew):*
+brew install ncurses
+
+
 ## Disciplina
 **Programação Imperativa e Funcional** - 2024.2
 
