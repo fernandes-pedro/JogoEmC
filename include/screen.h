@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-// Terminal control sequences
+
 #define ESC            "\033"
 #define NORMALTEXT     "[0m"
 #define BOLDTEXT       "[1m"
@@ -23,7 +23,6 @@
 #define HIDECURSOR     "[?25l"
 #define CLEARSCREEN    "[2J"
 
-// BOX Drawing - Unix like terminals
 #define BOX_ENABLE     "(0"
 #define BOX_DISABLE    "(B"
 #define BOX_VLINE      0x78
@@ -42,7 +41,7 @@
 #define BOX_BLOCK      0x61
 #define BOX_DOT        0x7E
 
-// screen constants
+
 #define SCRSTARTX      3      // Initial and final screen positions for the game
 #define SCRENDX        75     // It means the area that can be drawn 
 #define SCRSTARTY      1
