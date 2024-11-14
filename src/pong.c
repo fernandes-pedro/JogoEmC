@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
+#include "../include/keyboard.h"
+#include "../include/timer.h"
+#include "../include/screen.h"
 
 #define WIDTH 40
 #define HEIGHT 20
